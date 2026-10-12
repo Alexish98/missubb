@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missubb</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f3;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .contenedor {
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #c9184a;
+        }
+
+        p {
+            color: #590d22;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 16px 24px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9184a;
+        }
+    </style>
+    
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ff4d6d">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>miss bb?</h1>
+
+        <p>push if u miss bb</p>
+
+        <button id="botonEnviar">miss u bb</button>
+
+        <p id="respuesta"></p>
+    </div>
+
+    <script>
+        const boton = document.getElementById("botonEnviar");
+        const respuesta = document.getElementById("respuesta");
+
+        boton.addEventListener("click", function() {
+            respuesta.textContent = "miss u bb 🥺";
+        });
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./service-worker.js")
+                .then(function() {
+                    console.log("Service worker registrado correctamente.");
+                })
+                .catch(function(error) {
+                    console.error("Error al registrar:", error);
+                });
+}
+    </script>
+</body>
+</html>

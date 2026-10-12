@@ -1,0 +1,10 @@
+
+{
+  "name": "miss u bb",
+  "short_name": "missubb",
+  "description": "Una pequeña aplicación para cuando echo de menos a mi chica",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff0f3",
+  "theme_color": "#ff4d6d"
+}
